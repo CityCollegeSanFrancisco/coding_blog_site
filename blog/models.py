@@ -84,7 +84,7 @@ class Post(models.Model):
     text = models.TextField(help_text='text')
     code = models.TextField(help_text='enter code or repl iframe')
     lead_image = models.ImageField
-    images = models.ImageField
+    images = models.ImageField(blank=True, null=True)
     pull_quotes = models.TextField(help_text='pull quote')
     tags = models.ManyToManyField(Tag)
 
